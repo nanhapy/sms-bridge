@@ -1,0 +1,6 @@
+{
+  "modelVersion": "5.0.0",
+  "description": "SMS Bridge 鸿蒙端：把短信验证码一键推送到 Windows 电脑",
+  "dependencies": {},
+  "devDependencies": {}
+}

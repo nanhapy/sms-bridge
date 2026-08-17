@@ -1,0 +1,47 @@
+# Operating system and editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*~
+
+# Local environment and machine configuration
+.env
+.env.*
+!.env.example
+local.properties
+*.local
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Local development plans
+docs/superpowers/
+
+# Node.js and frontend builds
+node_modules/
+dist/
+dist-ssr/
+
+# Rust and Tauri builds
+target/
+**/src-tauri/gen/schemas/
+*.pdb
+*.msi
+*-setup.exe
+
+# HarmonyOS and DevEco Studio outputs
+.hvigor-home/
+.hvigor/
+oh_modules/
+harmony-app/build/
+harmony-app/entry/build/
+*.hap
+
+# Legacy receiver runtime files
+pc-receiver/toast-marker.txt

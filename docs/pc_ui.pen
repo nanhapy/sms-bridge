@@ -1,0 +1,1640 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "o93on",
+      "x": 880,
+      "y": 0,
+      "name": "SMS Bridge Main Window",
+      "clip": true,
+      "width": 460,
+      "height": 640,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "jjW8c",
+          "name": "Title Bar",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "$surface",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "padding": [
+            0,
+            20
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Bx2gr",
+              "name": "Brand and Status",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "GuTcx",
+                  "name": "App Icon",
+                  "width": 34,
+                  "height": 34,
+                  "fill": "$accent",
+                  "cornerRadius": 9,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "nYzz5",
+                      "name": "Message Icon",
+                      "width": 18,
+                      "height": 18,
+                      "icon": "message-square-text",
+                      "library": "lucide",
+                      "fill": "#FFFFFF"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "r9TvH",
+                  "name": "Brand Text",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "DS2zR",
+                      "name": "Application Name",
+                      "fill": "$text",
+                      "content": "短信快传",
+                      "fontFamily": "$font",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "G6wpt",
+                      "name": "Receiver Status",
+                      "gap": 6,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "qcBt7",
+                          "name": "Online Indicator",
+                          "fill": "$success",
+                          "width": 7,
+                          "height": 7
+                        },
+                        {
+                          "type": "text",
+                          "id": "krnRe",
+                          "name": "Receiver Status Text",
+                          "fill": "$muted",
+                          "content": "接收中 · 端口 8899",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Gpa1R",
+              "name": "Inline Autostart Setting",
+              "fill": "#00000000",
+              "stroke": "$line",
+              "gap": 7,
+              "justifyContent": "end",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Odag5",
+                  "name": "Inline Autostart Text",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "l7lXCl",
+                      "x": 0,
+                      "y": 2,
+                      "name": "Inline Autostart Icon",
+                      "enabled": false,
+                      "width": 15,
+                      "height": 15,
+                      "icon": "power",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g3g51r",
+                      "name": "Inline Autostart Label",
+                      "fill": "$muted",
+                      "content": "自启动",
+                      "fontFamily": "$font",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dJNWy",
+                  "name": "Inline Autostart Toggle On",
+                  "width": 30,
+                  "height": 16,
+                  "fill": "$accent",
+                  "cornerRadius": 9,
+                  "padding": 2,
+                  "justifyContent": "end",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "ellipse",
+                      "id": "nQwBy",
+                      "name": "Inline Autostart Toggle Thumb",
+                      "fill": "#FFFFFF",
+                      "width": 12,
+                      "height": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "z47dBg",
+              "x": 406,
+              "y": 15,
+              "name": "Settings Button",
+              "enabled": false,
+              "width": 34,
+              "height": 34,
+              "fill": "$bg",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "O5xXKs",
+                  "name": "Settings Icon",
+                  "width": 17,
+                  "height": 17,
+                  "icon": "settings",
+                  "library": "lucide",
+                  "fill": "$muted"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "in4ds",
+          "name": "Main Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            18,
+            20,
+            16,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "O8VqUD",
+              "name": "History Header",
+              "width": "fill_container",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YUR7i",
+                  "name": "History Title Group",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Uf5ff",
+                      "name": "History Title",
+                      "fill": "$text",
+                      "content": "最近消息",
+                      "fontFamily": "$font",
+                      "fontSize": 18,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "K3wfcT",
+                      "name": "History Hint",
+                      "fill": "$muted",
+                      "content": "点击整条消息即可复制",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OeTDT",
+                  "name": "Clear History Action",
+                  "cornerRadius": 7,
+                  "gap": 6,
+                  "padding": [
+                    7,
+                    10
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "oJ40Q",
+                      "name": "Clear History Icon",
+                      "width": 14,
+                      "height": 14,
+                      "icon": "trash-2",
+                      "library": "lucide",
+                      "fill": "$muted"
+                    },
+                    {
+                      "type": "text",
+                      "id": "g7mBp",
+                      "name": "Clear History Label",
+                      "fill": "$muted",
+                      "content": "清空",
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "r0JyG",
+              "name": "History List",
+              "clip": true,
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "$surface",
+              "cornerRadius": 10,
+              "stroke": "$line",
+              "strokeWidth": 1,
+              "layout": "vertical",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "BTUit",
+                  "name": "Message Row 1",
+                  "width": "fill_container",
+                  "fill": "$surface-hover",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "isq9w",
+                      "name": "Message Meta 1",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "aP0yv",
+                          "name": "Verification Code 1",
+                          "fill": "$accent",
+                          "content": "143837",
+                          "fontFamily": "$font",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 0.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "plKGD",
+                          "name": "Received Time 1",
+                          "fill": "$muted",
+                          "content": "刚刚 · 14:32",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "KVuBd",
+                      "name": "Message Preview 1",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "【华为帐号】您的验证码为 143837，5 分钟内有效，请勿向他人泄露。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "H6rthI",
+                  "name": "Message Row 2",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "a4aaOU",
+                      "name": "Message Meta 2",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "pEnzS",
+                          "name": "Verification Code 2",
+                          "fill": "$accent",
+                          "content": "834672",
+                          "fontFamily": "$font",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 0.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "chcq2",
+                          "name": "Received Time 2",
+                          "fill": "$muted",
+                          "content": "今天 · 13:18",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "CDwPm",
+                      "name": "Message Preview 2",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "【示例银行】动态验证码 834672，正在进行登录验证。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CPVK3",
+                  "name": "Message Row 3",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "b0wHGk",
+                      "name": "Message Meta 3",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "VYxaM",
+                          "name": "Verification Code 3",
+                          "fill": "$accent",
+                          "content": "2915",
+                          "fontFamily": "$font",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 0.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "S3e5C1",
+                          "name": "Received Time 3",
+                          "fill": "$muted",
+                          "content": "今天 · 09:46",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "ilA8E",
+                      "name": "Message Preview 3",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "您的校验码为 2915，请在 10 分钟内完成操作。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Q8ls7",
+                  "name": "Message Row 4",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "stroke": "$line",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sugPs",
+                      "name": "Message Meta 4",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "C34CkN",
+                          "name": "Unrecognized Label 4",
+                          "fill": "$text",
+                          "content": "普通消息",
+                          "fontFamily": "$font",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xCETG",
+                          "name": "Received Time 4",
+                          "fill": "$muted",
+                          "content": "昨天 · 21:07",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "GB5lc",
+                      "name": "Message Preview 4",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "快递已放置于北门丰巢柜，请及时领取。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "h6R7v",
+                  "name": "Message Row 5",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "y1tDl",
+                      "name": "Message Meta 5",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "UWg5y",
+                          "name": "Verification Code 5",
+                          "fill": "$accent",
+                          "content": "560218",
+                          "fontFamily": "$font",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 0.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "BjQKu",
+                          "name": "Received Time 5",
+                          "fill": "$muted",
+                          "content": "昨天 · 18:42",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "q8NJOl",
+                      "name": "Message Preview 5",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "登录验证码 560218，请勿将验证码告知他人。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "PalXh",
+                  "name": "Message Row 6",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "TJYiZ",
+                      "name": "Message Meta 6",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nq3Pd",
+                          "name": "Verification Code 6",
+                          "fill": "$accent",
+                          "content": "7724",
+                          "fontFamily": "$font",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 0.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "wTCNV",
+                          "name": "Received Time 6",
+                          "fill": "$muted",
+                          "content": "08-15 · 16:06",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "mNs1v",
+                      "name": "Message Preview 6",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "您的动态码是 7724，本次验证将在 5 分钟后失效。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jp7zz",
+                  "name": "Message Row 7",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "PRIGI",
+                      "name": "Message Meta 7",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "tnvnK",
+                          "name": "Verification Code 7",
+                          "fill": "$accent",
+                          "content": "926031",
+                          "fontFamily": "$font",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 0.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "KgKVB",
+                          "name": "Received Time 7",
+                          "fill": "$muted",
+                          "content": "08-15 · 10:21",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "tnuID",
+                      "name": "Message Preview 7",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "安全验证码 926031，仅用于本次身份验证。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "N0bC2G",
+                  "name": "Message Row 8",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "stroke": "$line",
+                  "strokeWidth": {
+                    "top": 1
+                  },
+                  "layout": "vertical",
+                  "gap": 7,
+                  "padding": [
+                    13,
+                    14
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ihTCC",
+                      "name": "Message Meta 8",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "GdA1Z",
+                          "name": "Verification Code 8",
+                          "fill": "$accent",
+                          "content": "418560",
+                          "fontFamily": "$font",
+                          "fontSize": 18,
+                          "fontWeight": "600",
+                          "letterSpacing": 0.6
+                        },
+                        {
+                          "type": "text",
+                          "id": "zBcYU",
+                          "name": "Received Time 8",
+                          "fill": "$muted",
+                          "content": "08-14 · 22:18",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "euaEj",
+                      "name": "Message Preview 8",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "本次操作验证码为 418560，请及时完成验证。",
+                      "lineHeight": 1.5,
+                      "fontFamily": "$font",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 2,
+                  "id": "QKPgy",
+                  "layoutPosition": "absolute",
+                  "x": 413,
+                  "y": 7,
+                  "name": "History Scrollbar Track",
+                  "fill": "#D1D5DB55",
+                  "width": 3,
+                  "height": 292
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 2,
+                  "id": "rJl7u",
+                  "layoutPosition": "absolute",
+                  "x": 413,
+                  "y": 8,
+                  "name": "History Scrollbar Thumb",
+                  "fill": "#9CA3AF",
+                  "width": 3,
+                  "height": 82
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "btiAR",
+              "name": "Copy Feedback",
+              "width": "fill_container",
+              "fill": "$accent-soft",
+              "cornerRadius": 8,
+              "gap": 7,
+              "padding": [
+                9,
+                12
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "JOwKS",
+                  "name": "Copy Feedback Icon",
+                  "width": 15,
+                  "height": 15,
+                  "icon": "check",
+                  "library": "lucide",
+                  "fill": "$accent"
+                },
+                {
+                  "type": "text",
+                  "id": "w2pMnJ",
+                  "name": "Copy Feedback Text",
+                  "fill": "$accent",
+                  "content": "已复制验证码 143837",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "A6YQFr",
+      "x": 1420,
+      "y": 0,
+      "name": "SMS Bridge Settings Window",
+      "enabled": false,
+      "clip": true,
+      "width": 460,
+      "height": 640,
+      "fill": "$bg",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "PcnNS",
+          "name": "Settings Title Bar",
+          "width": "fill_container",
+          "height": 64,
+          "fill": "$surface",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 12,
+          "padding": [
+            0,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "T5Yvl",
+              "name": "Back Button",
+              "width": 34,
+              "height": 34,
+              "fill": "$bg",
+              "cornerRadius": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "r4xRh",
+                  "name": "Back Icon",
+                  "width": 17,
+                  "height": 17,
+                  "icon": "arrow-left",
+                  "library": "lucide",
+                  "fill": "$text"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "lGMUm",
+              "name": "Settings Title",
+              "fill": "$text",
+              "content": "设置",
+              "fontFamily": "$font",
+              "fontSize": 17,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "hLTLk",
+          "name": "Settings Content",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 22,
+          "padding": [
+            22,
+            20
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "K7GBXG",
+              "name": "Startup Section",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "zz5aU",
+                  "name": "Startup Section Label",
+                  "fill": "$muted",
+                  "content": "启动",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "Nu5wP",
+                  "name": "Start with Windows Row",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "cornerRadius": 10,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "padding": [
+                    15,
+                    16
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "GNhZZ",
+                      "name": "Start with Windows Text",
+                      "width": 330,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Q120P",
+                          "name": "Start with Windows Title",
+                          "fill": "$text",
+                          "content": "开机自动启动",
+                          "fontFamily": "$font",
+                          "fontSize": 14,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "v5GVa",
+                          "name": "Start with Windows Description",
+                          "fill": "$muted",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "登录 Windows 后静默启动到系统托盘",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UgQEs",
+                      "name": "Autostart Toggle On",
+                      "width": 40,
+                      "height": 22,
+                      "fill": "$accent",
+                      "cornerRadius": 12,
+                      "padding": 2,
+                      "justifyContent": "end",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "ellipse",
+                          "id": "AsKCY",
+                          "name": "Autostart Toggle Thumb",
+                          "fill": "#FFFFFF",
+                          "width": 18,
+                          "height": 18
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "M0gz6A",
+              "name": "Behavior Section",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "gk2Zz",
+                  "name": "Behavior Section Label",
+                  "fill": "$muted",
+                  "content": "运行方式",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "A7297",
+                  "name": "Behavior Summary",
+                  "clip": true,
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "cornerRadius": 10,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "layout": "vertical",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "yc81H",
+                      "name": "Behavior Row 1",
+                      "width": "fill_container",
+                      "stroke": "$line",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 12,
+                      "padding": [
+                        13,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "nBRUf",
+                          "name": "Behavior Icon Box 1",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "$accent-soft",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "H38SQ",
+                              "name": "Behavior Icon 1",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "clipboard-check",
+                              "library": "lucide",
+                              "fill": "$accent"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "TWuL4",
+                          "name": "Behavior Text 1",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 3,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "dq6OD",
+                              "name": "Behavior Title 1",
+                              "fill": "$text",
+                              "content": "自动复制验证码",
+                              "fontFamily": "$font",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "AgCHz",
+                              "name": "Behavior Description 1",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "收到验证码后自动写入剪贴板",
+                              "fontFamily": "$font",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "pGu9t",
+                      "name": "Behavior Row 2",
+                      "width": "fill_container",
+                      "stroke": "$line",
+                      "strokeWidth": {
+                        "bottom": 1
+                      },
+                      "gap": 12,
+                      "padding": [
+                        13,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "dVeH0",
+                          "name": "Behavior Icon Box 2",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "$accent-soft",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "pYRFB",
+                              "name": "Behavior Icon 2",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "bell",
+                              "library": "lucide",
+                              "fill": "$accent"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "L8VWM",
+                          "name": "Behavior Text 2",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 3,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "IgsNb",
+                              "name": "Behavior Title 2",
+                              "fill": "$text",
+                              "content": "Windows 通知",
+                              "fontFamily": "$font",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "Mwpba",
+                              "name": "Behavior Description 2",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "收到新消息时显示系统通知",
+                              "fontFamily": "$font",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "KHHdG",
+                      "name": "Behavior Row 3",
+                      "width": "fill_container",
+                      "stroke": "$line",
+                      "gap": 12,
+                      "padding": [
+                        13,
+                        14
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "WN7WI",
+                          "name": "Behavior Icon Box 3",
+                          "width": 30,
+                          "height": 30,
+                          "fill": "$accent-soft",
+                          "cornerRadius": 8,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon",
+                              "id": "FYSd8",
+                              "name": "Behavior Icon 3",
+                              "width": 15,
+                              "height": 15,
+                              "icon": "panel-top-close",
+                              "library": "lucide",
+                              "fill": "$accent"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "i4k3Zh",
+                          "name": "Behavior Text 3",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 3,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "McZFC",
+                              "name": "Behavior Title 3",
+                              "fill": "$text",
+                              "content": "关闭到托盘",
+                              "fontFamily": "$font",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            },
+                            {
+                              "type": "text",
+                              "id": "mFxnQ",
+                              "name": "Behavior Description 3",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "关闭主窗口后继续在后台接收",
+                              "fontFamily": "$font",
+                              "fontSize": 11,
+                              "fontWeight": "normal"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "e4D3WU",
+              "name": "Storage Section",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 10,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tYV3E",
+                  "name": "Storage Section Label",
+                  "fill": "$muted",
+                  "content": "历史记录",
+                  "fontFamily": "$font",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "UypSc",
+                  "name": "Storage Row",
+                  "width": "fill_container",
+                  "fill": "$surface",
+                  "cornerRadius": 10,
+                  "stroke": "$line",
+                  "strokeWidth": 1,
+                  "padding": [
+                    14,
+                    16
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EHmxS",
+                      "name": "Storage Text",
+                      "width": 300,
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ftfYD",
+                          "name": "Storage Title",
+                          "fill": "$text",
+                          "content": "保留最近 15 条",
+                          "fontFamily": "$font",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LGlWA",
+                          "name": "Storage Description",
+                          "fill": "$muted",
+                          "content": "仅保存在本机应用数据目录",
+                          "fontFamily": "$font",
+                          "fontSize": 11,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "QVOhg",
+                      "name": "Settings Clear Button",
+                      "fill": "#FEECEC",
+                      "cornerRadius": 7,
+                      "padding": [
+                        7,
+                        10
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "nqK53",
+                          "name": "Settings Clear Label",
+                          "fill": "$danger",
+                          "content": "清空",
+                          "fontFamily": "$font",
+                          "fontSize": 12,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "VxAFu",
+      "x": 1408,
+      "y": 0,
+      "name": "System Tray Menu",
+      "clip": true,
+      "width": 270,
+      "fill": "$surface",
+      "cornerRadius": 10,
+      "stroke": "$line",
+      "strokeWidth": 1,
+      "effect": {
+        "type": "shadow",
+        "shadowType": "outer",
+        "color": "#11182722",
+        "offset": {
+          "x": 0,
+          "y": 8
+        },
+        "blur": 24
+      },
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "c1yWe",
+          "name": "Tray Menu Header",
+          "width": "fill_container",
+          "fill": "$bg",
+          "stroke": "$line",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 10,
+          "padding": [
+            13,
+            14
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "ellipse",
+              "id": "ZRuW8",
+              "name": "Tray Online Indicator",
+              "fill": "$success",
+              "width": 8,
+              "height": 8
+            },
+            {
+              "type": "frame",
+              "id": "J2W69",
+              "name": "Tray Status Text",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "MdjL3",
+                  "name": "Tray App Name",
+                  "fill": "$text",
+                  "content": "短信快传",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "r82V60",
+                  "name": "Tray Receiver Status",
+                  "fill": "$muted",
+                  "content": "正在接收 · 端口 8899",
+                  "fontFamily": "$font",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PZ7Jw",
+          "name": "Tray Menu Items",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": 6,
+          "children": [
+            {
+              "type": "frame",
+              "id": "p4zyKb",
+              "name": "Tray Menu Item 1",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "$surface-hover",
+              "cornerRadius": 7,
+              "gap": 11,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "ZRm9f",
+                  "name": "Tray Menu Icon 1",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "panel-top-open",
+                  "library": "lucide",
+                  "fill": "$text"
+                },
+                {
+                  "type": "text",
+                  "id": "nMrsj",
+                  "name": "Tray Menu Label 1",
+                  "fill": "$text",
+                  "content": "打开主窗口",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Pmx6y",
+              "name": "Tray Menu Item 2",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "$surface",
+              "cornerRadius": 7,
+              "gap": 11,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "Ly1Ps",
+                  "name": "Tray Menu Icon 2",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "trash-2",
+                  "library": "lucide",
+                  "fill": "$text"
+                },
+                {
+                  "type": "text",
+                  "id": "FlC2j",
+                  "name": "Tray Menu Label 2",
+                  "fill": "$text",
+                  "content": "清空历史",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "UtJGl",
+              "name": "Tray Menu Item 3",
+              "width": "fill_container",
+              "height": 42,
+              "fill": "$surface",
+              "cornerRadius": 7,
+              "gap": 11,
+              "padding": [
+                0,
+                10
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "q2Tzr",
+                  "name": "Tray Menu Icon 3",
+                  "width": 16,
+                  "height": 16,
+                  "icon": "power",
+                  "library": "lucide",
+                  "fill": "$danger"
+                },
+                {
+                  "type": "text",
+                  "id": "FticJ",
+                  "name": "Tray Menu Label 3",
+                  "fill": "$danger",
+                  "content": "退出",
+                  "fontFamily": "$font",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "bg": {
+      "type": "color",
+      "value": "#F5F6F8"
+    },
+    "surface": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "surface-hover": {
+      "type": "color",
+      "value": "#F0F6FF"
+    },
+    "text": {
+      "type": "color",
+      "value": "#18212F"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#6B7280"
+    },
+    "line": {
+      "type": "color",
+      "value": "#E5E7EB"
+    },
+    "accent": {
+      "type": "color",
+      "value": "#2563EB"
+    },
+    "accent-soft": {
+      "type": "color",
+      "value": "#EAF2FF"
+    },
+    "success": {
+      "type": "color",
+      "value": "#16A34A"
+    },
+    "danger": {
+      "type": "color",
+      "value": "#DC2626"
+    },
+    "font": {
+      "type": "string",
+      "value": "Noto Sans SC"
+    }
+  },
+  "fileToken": "0fdcd901-15d7-4a83-b85a-5135446de5ef"
+}

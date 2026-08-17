@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "验证码快传模块"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "把短信验证码一键推送到 Windows 电脑"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "验证码快传"
+    },
+    {
+      "name": "share_ext_label",
+      "value": "发送到电脑"
+    },
+    {
+      "name": "share_ext_desc",
+      "value": "把分享的文本（短信等）推送到电脑"
+    },
+    {
+      "name": "pasteboard_reason",
+      "value": "用于在你复制短信验证码后自动识别并推送到电脑（剪贴板监听功能）"
+    }
+  ]
+}

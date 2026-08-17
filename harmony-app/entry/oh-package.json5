@@ -1,0 +1,9 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "SMS Bridge 主模块：验证码快传",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {}
+}

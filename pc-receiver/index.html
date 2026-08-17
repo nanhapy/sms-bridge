@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>短信快传</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <div class="brand-group">
+          <div class="app-icon" aria-hidden="true">✉</div>
+          <div>
+            <div class="app-name">短信快传</div>
+            <p id="receiver-status" class="receiver-status" role="status">正在启动接收服务</p>
+          </div>
+        </div>
+        <label class="autostart-control" for="autostart-toggle">
+          <span>自启动</span>
+          <button id="autostart-toggle" class="toggle" type="button" role="switch" aria-checked="false" aria-label="开机自启动">
+            <span class="toggle-thumb"></span>
+          </button>
+        </label>
+      </header>
+      <main>
+        <section class="history-section" aria-labelledby="history-heading">
+          <div class="history-header">
+            <div>
+              <h1 id="history-heading">最近消息</h1>
+              <p>点击整条消息即可复制</p>
+            </div>
+            <button id="clear-history" class="clear-button" type="button">清空</button>
+          </div>
+          <p id="warning" class="warning" hidden role="alert"></p>
+          <div class="history-panel">
+            <p id="empty-state" class="empty-state">暂未收到消息</p>
+            <ul id="history-list" aria-label="最近消息记录"></ul>
+          </div>
+          <p id="copy-feedback" class="copy-feedback" aria-live="polite"></p>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
