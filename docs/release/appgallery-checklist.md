@@ -1,4 +1,4 @@
-# 「青鸟传码」华为应用市场上架检查清单
+# 「码到成功」华为应用市场上架检查清单
 
 > 时间线总览（各项并行推进）：
 > - 第 1 天：启动 APP 备案、启动版权认证、AGC 创建应用、申请发布证书与 Profile
@@ -8,16 +8,16 @@
 
 ## 一、立即启动（周期最长）
 
-- [ ] **APP 备案（工信部）**：材料与话术见 `docs/release/备案材料.md`（含可直接粘贴的服务内容说明、材料清单、退回原因对照）。准备：实名认证账号、应用名称（青鸟传码）、包名、服务内容说明、隐私政策链接。注意：备案的应用名称、包名必须与 AGC 完全一致（包名现为 `com.smsbridge.app`）。
+- [ ] **APP 备案（工信部）**：材料与话术见 `docs/release/备案材料.md`（含可直接粘贴的服务内容说明、材料清单、退回原因对照）。准备：实名认证账号、应用名称（码到成功）、包名、服务内容说明、隐私政策链接。注意：备案的应用名称、包名必须与 AGC 完全一致（包名现为 `com.smsbridge.app`）。
 - [ ] **版权材料（二选一）**：软件著作权登记证书（常规 20–40 个工作日，可加急）或电子版权认证（数个工作日，AGC 认可）。
 
 ## 二、工程侧
 
 - [x] 更换正式包名 `com.smsbridge.app`（AppScope/app.json5，2026-09-01 完成）
-- [x] 统一应用名称为**青鸟传码**（手机端 label、主界面标题、PC 接收端界面与托盘、README、隐私政策、上架文案，2026-09-01 完成）
+- [x] 统一应用名称为**码到成功**（手机端 label、主界面标题、PC 接收端界面与托盘、README、隐私政策、上架文案，2026-09-01 完成）
 - [x] deviceTypes 收敛为仅 `phone`（首版不上架平板，规避适配驳回；后续做平板布局再加回）
 - [ ] **重新生成调试签名**：包名变更后旧调试 Profile 已失效。DevEco Studio → File → Project Structure → Signing Configs → 勾选 Automatically generate signature，重新自动签名后才能真机调试。
-- [ ] **AGC 创建应用**：我的项目 → 添加应用 → 平台选 APP(HarmonyOS)，名称填"青鸟传码"（重名则换"码到渠成"或"飞码传书"），包名填 `com.smsbridge.app`，应用分类选"应用"（分类创建后不可修改）。
+- [ ] **AGC 创建应用**：我的项目 → 添加应用 → 平台选 APP(HarmonyOS)，名称填"码到成功"（重名则换"飞码传书""码上就到""青鸟传码"），包名填 `com.smsbridge.app`，应用分类选"应用"（分类创建后不可修改）。
 - [ ] **生成发布密钥**：DevEco Studio → Build → Generate Key and CSR，新建 .p12 密钥库（密码至少 8 位、含两种以上字符类型）+ .csr 文件。**私钥务必备份，丢失后将无法给应用发新版本。**
 - [ ] **申请发布证书**：AGC → 用户与访问 → 证书管理 → 新增证书 → 类型选"发布证书"，上传 .csr，下载 .cer。
 - [ ] **申请发布 Profile**：AGC → 我的项目 → 对应应用 → HAP Provision Profile 管理 → 添加，类型选"发布"，设备类型勾选与 module.json5 的 deviceTypes 一致，下载 .p7b。
@@ -27,7 +27,7 @@
 
 ## 三、AGC 应用信息与提审材料
 
-- [ ] 应用图标（按 AGC 后台提示规格准备）
+- [x] 应用图标：`docs/release/appgallery-icon-1024.png`（AGC 上传用）与 `appgallery-icon-216.png`，1024/216、PNG 直角、无水印、<2MB；同步替换包内 `app_icon` / `icon` / `startIcon` 三处（512×512），与 AGC 上传图标一致（2026-09-01 完成）
 - [ ] 截图 ≥3 张（建议 5 张，清单见 `docs/release/appgallery-listing.md`）
 - [ ] 应用简介 + 详细描述（见 `docs/release/appgallery-listing.md`）
 - [x] 隐私政策 URL：`https://nanhapy.github.io/sms-bridge/release/privacy-policy.html`（本仓库 GitHub Pages，开发者联系方式已填写：Larry Zhao / pzl1988p@163.com）

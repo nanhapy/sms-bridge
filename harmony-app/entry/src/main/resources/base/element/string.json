@@ -2,7 +2,7 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "青鸟传码模块"
+      "value": "码到成功模块"
     },
     {
       "name": "EntryAbility_desc",
@@ -10,7 +10,7 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "青鸟传码"
+      "value": "码到成功"
     },
     {
       "name": "share_ext_label",

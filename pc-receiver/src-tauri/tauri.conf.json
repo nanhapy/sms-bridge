@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "SMS Bridge Receiver",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "identifier": "com.smsbridge.receiver",
   "build": {
     "beforeDevCommand": "npm run dev",
@@ -13,7 +13,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "青鸟传码",
+        "title": "码到成功",
         "width": 460,
         "height": 640,
         "resizable": false,

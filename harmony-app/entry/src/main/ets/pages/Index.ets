@@ -186,7 +186,7 @@ struct Index {
 
   build() {
     Column({ space: 10 }) {
-      Text('青鸟传码')
+      Text('码到成功')
         .fontSize(24)
         .fontWeight(FontWeight.Bold)
         .margin({ top: 16 })
