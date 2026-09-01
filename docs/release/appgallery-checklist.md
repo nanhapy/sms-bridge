@@ -1,4 +1,4 @@
-# 「短信快传」华为应用市场上架检查清单
+# 「青鸟传码」华为应用市场上架检查清单
 
 > 时间线总览（各项并行推进）：
 > - 第 1 天：启动 APP 备案、启动版权认证、AGC 创建应用、申请发布证书与 Profile
@@ -8,14 +8,15 @@
 
 ## 一、立即启动（周期最长）
 
-- [ ] **APP 备案（工信部）**：从华为开发者联盟 / AppGallery Connect 的备案入口协助提交。准备：实名认证账号、应用名称、包名、服务内容说明、隐私政策链接。注意：备案的应用名称、包名必须与 AGC 完全一致（包名现为 `com.smsbridge.app`）。
+- [ ] **APP 备案（工信部）**：从华为开发者联盟 / AppGallery Connect 的备案入口协助提交。准备：实名认证账号、应用名称（青鸟传码）、包名、服务内容说明、隐私政策链接。注意：备案的应用名称、包名必须与 AGC 完全一致（包名现为 `com.smsbridge.app`）。
 - [ ] **版权材料（二选一）**：软件著作权登记证书（常规 20–40 个工作日，可加急）或电子版权认证（数个工作日，AGC 认可）。
 
 ## 二、工程侧
 
 - [x] 更换正式包名 `com.smsbridge.app`（AppScope/app.json5，2026-09-01 完成）
+- [x] 统一应用名称为**青鸟传码**（手机端 label、PC 接收端界面与托盘、README、隐私政策、上架文案，2026-09-01 完成）
 - [ ] **重新生成调试签名**：包名变更后旧调试 Profile 已失效。DevEco Studio → File → Project Structure → Signing Configs → 勾选 Automatically generate signature，重新自动签名后才能真机调试。
-- [ ] **AGC 创建应用**：我的项目 → 添加应用 → 平台选 APP(HarmonyOS)，包名填 `com.smsbridge.app`，应用分类选"应用"（分类创建后不可修改）。
+- [ ] **AGC 创建应用**：我的项目 → 添加应用 → 平台选 APP(HarmonyOS)，名称填"青鸟传码"（重名则换"码到渠成"或"飞码传书"），包名填 `com.smsbridge.app`，应用分类选"应用"（分类创建后不可修改）。
 - [ ] **生成发布密钥**：DevEco Studio → Build → Generate Key and CSR，新建 .p12 密钥库（密码至少 8 位、含两种以上字符类型）+ .csr 文件。**私钥务必备份，丢失后将无法给应用发新版本。**
 - [ ] **申请发布证书**：AGC → 用户与访问 → 证书管理 → 新增证书 → 类型选"发布证书"，上传 .csr，下载 .cer。
 - [ ] **申请发布 Profile**：AGC → 我的项目 → 对应应用 → HAP Provision Profile 管理 → 添加，类型选"发布"，设备类型勾选与 module.json5 的 deviceTypes 一致，下载 .p7b。

@@ -32,7 +32,7 @@ pub fn create_tray(app: &AppHandle, exit_flag: ExitFlag) -> Result<(), String> {
     TrayIconBuilder::with_id("main-tray")
         .menu(&menu)
         .icon(icon)
-        .tooltip("短信快传")
+        .tooltip("青鸟传码")
         .show_menu_on_left_click(false)
         .on_menu_event(move |app, event| match event.id().as_ref() {
             "open" => show_main(app),
