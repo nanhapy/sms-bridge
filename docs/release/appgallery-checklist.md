@@ -28,7 +28,7 @@
 - [ ] 应用图标（按 AGC 后台提示规格准备）
 - [ ] 截图 ≥3 张（建议 5 张，清单见 `docs/release/appgallery-listing.md`）
 - [ ] 应用简介 + 详细描述（见 `docs/release/appgallery-listing.md`）
-- [ ] 隐私政策 URL：`https://nanhapy.github.io/sms-bridge/release/privacy-policy.html`（本仓库 GitHub Pages，提审前确认公网可访问，并填好页面内的开发者名称与联系邮箱）
+- [x] 隐私政策 URL：`https://nanhapy.github.io/sms-bridge/release/privacy-policy.html`（本仓库 GitHub Pages，开发者联系方式已填写：Larry Zhao / pzl1988p@163.com）
 - [ ] 内容分级问卷
 - [ ] PC 接收端下载地址（填"了解更多"官网字段）：`https://github.com/nanhapy/sms-bridge/releases`，Windows 安装包（NSIS x64 setup.exe）上传到该 Releases
 - [ ] 备案号 + 主办单位信息（版本信息 → 备案信息，点"校验证件号"通过）
