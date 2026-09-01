@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.example.smsbridge",
+    "bundleName": "com.smsbridge.app",
     "vendor": "smsbridge",
     "versionCode": 1000000,
     "versionName": "1.0.0",

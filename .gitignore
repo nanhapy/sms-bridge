@@ -13,6 +13,9 @@ Desktop.ini
 .env.*
 !.env.example
 local.properties
+
+# WorkBuddy local workspace data
+.workbuddy/
 *.local
 
 # Logs and temporary files
