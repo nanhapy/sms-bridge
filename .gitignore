@@ -38,6 +38,13 @@ target/
 *.msi
 *-setup.exe
 
+# HarmonyOS signing material (never commit private keys)
+*.p12
+*.csr
+*.cer
+*.p7b
+harmony-app/material/
+
 # HarmonyOS and DevEco Studio outputs
 .hvigor-home/
 .hvigor/
