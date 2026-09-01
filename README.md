@@ -2,6 +2,9 @@
 
 短信快传将手机分享的验证码和文本发送到 Windows 接收端，接收端会显示通知并自动复制验证码。
 
+- Windows 接收端下载：[GitHub Releases](https://github.com/nanhapy/sms-bridge/releases)
+- [隐私政策](https://nanhapy.github.io/sms-bridge/release/privacy-policy.html)
+
 ## 安装 Windows 接收端
 
 1. 首次使用前，如旧版 Node 接收端仍在运行，请先由用户手动停止或卸载它。
